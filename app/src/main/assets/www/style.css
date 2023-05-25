@@ -1,0 +1,222 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #444444;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid #C4C4C4;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+    outline: none;
+    color: #444444;
+    /* background-color: #f8f8f8; */
+}
+
+#addButton {
+    display: flex;
+    justify-content: space-between;
+}
+
+.plus {
+    text-align: left;
+    font-size: 15px;
+    color: white;
+    /* background-color: #9953F1; */
+    border-radius: 15px;
+    height: auto;
+}
+
+input[type="submit"],
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    /* background-color: #428bca; */
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button {
+    margin-left: 10px;
+    background-color: #d9534f;
+}
+
+#addButton {
+    background-color: #833AE0;
+    border-radius: 50px;
+    width: 55%;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #444444;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li span {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+/* li button {
+    background-color: #d9534f;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+} */
+
+/* li button:hover {
+    background-color: #ff5b5b;
+} */
+
+
+/* стили для иконки удаления */
+.delete-icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+
+    background-size: cover;
+}
+
+/* стили для кнопки удаления */
+.delete-button {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 5px;
+    border-radius: 50%;
+    width: auto;
+    height: 25px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+/* стили для наведения на кнопку удаления */
+.delete-button:hover {
+    background-color: #a35cd6;
+}
+
+/* стили для нажатия на кнопку удаления */
+.delete-button:active {
+    background-color: #6f29a8;
+}
+
+/* стили для скрытия иконки удаления по умолчанию */
+.delete-icon.hide {
+    display: none;
+}
+
+/* стили для показа иконки удаления при наведении на элемент */
+.task-item:hover .delete-icon {
+    display: inline-block;
+}
+
+/* стили для изменения цвета иконки удаления при наведении */
+.task-item:hover .delete-icon:hover {
+    background-color: #a35cd6;
+}
+
+/* стили для изменения цвета иконки удаления при нажатии */
+.task-item:hover .delete-icon:active {
+    background-color: #6f29a8;
+}
+
+
+
+
+
+/* высота блока с задачами */
+
+#taskList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    max-height: calc(100vh - 200px);
+    overflow: auto;
+}
+
+@media (max-height: 800px) {
+    #taskList {
+        max-height: calc(100vh - 300px);
+    }
+}
+
+@media (max-height: 700px) {
+    #taskList {
+        max-height: calc(100vh - 400px);
+    }
+}
+
+@media (max-height: 600px) {
+    #taskList {
+        max-height: calc(100vh - 500px);
+    }
+}
+
+@media (max-height: 500px) {
+    #taskList {
+        max-height: calc(100vh - 600px);
+    }
+}
+
+@media (max-height: 400px) {
+    #taskList {
+        max-height: calc(100vh - 700px);
+    }
+}
+
+@media (max-height: 300px) {
+    #taskList {
+        max-height: calc(100vh - 800px);
+    }
+}
